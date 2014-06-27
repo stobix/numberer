@@ -65,8 +65,8 @@ init(_SmallestNumber) ->
 
 terminate(_Reason,_State) -> ok.
 
-code_change(_,_,_) -> ok.
-handle_info(_,_) -> ok.
+code_change(_,_,State) -> {ok,State}.
+handle_info(_,State) -> {noreply,State}.
 
 %%%=========================================================================
 %%% exports

@@ -54,7 +54,7 @@ get(Server) ->
 get(Name,Server) ->
   case is_numbered(Name,Server) of
     false -> 
-      Number=numberer_srv:get(Server),
+      Number=?MODULE:get(Server),
       gen_server:cast(numberer_srv,{register,Name,Number,Server}),
       Number;
     Number -> Number
@@ -99,7 +99,7 @@ i2n(Number,Server) ->
 number(Name,Server) ->
   case is_numbered(Name,Server) of
     false ->
-      {ok,numberer_srv:get(Name,Server)};
+      {ok,?MODULE:get(Name,Server)};
     True ->
       {error, {is_numbered, {Name,True}}}
   end.
