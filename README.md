@@ -13,7 +13,7 @@
 
 ## Summary
 
-This app keeps track of things that needs to be numbered sequentially, keeping a queue of occupied and freed numbers. It comes in two flavours: one general numbering server, and one specifically for creating unique names for, and for registering processes.
+This app keeps track of things that needs to be numbered sequentially, keeping a queue of occupied and freed numbers. It comes in two flavours: one general numbering server, [`numberer`](numberer#markdown-header-numberer),  and one specifically for creating unique names for, and for registering processes, [`pid_numberer`](numberer#markdown-header-pid_numberer). (These might be split up into two separate apps in a future update.)
 
 ## Installation
 
