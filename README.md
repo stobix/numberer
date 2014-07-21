@@ -9,7 +9,7 @@
         * [Functions returning numbers](numberer#markdown-header-functions-returning-numbers)
         * [Functions handling binds](numberer#markdown-header-functions-handling-binds)
         * [Tests](numberer#markdown-header-tests)
-        * [Server related](numberer#markdown-header-server_related)
+        * [Server related](numberer#markdown-header-server-related)
     * [`pid_numberer`](numberer#markdown-header-pid_numberer)
 * [Examples](numberer#markdown-header-examples)
 * [TODO](numberer#markdown-header-todo)
