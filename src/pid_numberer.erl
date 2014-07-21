@@ -36,6 +36,7 @@
 %%-------------------------------------------------------------------  
 %% API Function Definitions  
 %%-------------------------------------------------------------------  
+%% @private
 %% @doc Starts a new process synchronously. Spawns the process and  
 %%% waits for it to start.  
 %% See http://www.erlang.org/doc/man/proc_lib.html  
@@ -45,6 +46,7 @@ start_link() ->
 %%-------------------------------------------------------------------  
 %% API Function Definitions  
 %%-------------------------------------------------------------------  
+%% @private
 %% @doc Notifies the parent of a successful start and then runs the  
 %% main loop. When the process has started, it must call  
 %% init_ack(Parent,Ret) or init_ack(Ret), where Parent is the  
