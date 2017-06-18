@@ -1,19 +1,19 @@
 # README
 
-* [Summary](numberer#markdown-header-summary)
-* [Installation](numberer#markdown-header-installation)
-    * [Setup](numberer#markdown-header-setup)
-    * [Dependencies](numberer#markdown-header-dependencies)
-* [Usage](numberer#markdown-header-usage)
-    * [`numberer`](numberer#markdown-header-numberer)
-        * [Functions returning numbers](numberer#markdown-header-functions-returning-numbers)
-        * [Functions handling binds](numberer#markdown-header-functions-handling-binds)
-        * [Tests](numberer#markdown-header-tests)
-        * [Server related](numberer#markdown-header-server-related)
-    * [`pid_numberer`](numberer#markdown-header-pid_numberer)
-* [Examples](numberer#markdown-header-examples)
-* [TODO](numberer#markdown-header-todo)
-* [Meta info](numberer#markdown-header-meta)
+* [Summary](#markdown-header-summary)
+* [Installation](#markdown-header-installation)
+    * [Setup](#markdown-header-setup)
+    * [Dependencies](#markdown-header-dependencies)
+* [Usage](#markdown-header-usage)
+    * [`numberer`](#markdown-header-numberer)
+        * [Functions returning numbers](#markdown-header-functions-returning-numbers)
+        * [Functions handling binds](#markdown-header-functions-handling-binds)
+        * [Tests](#markdown-header-tests)
+        * [Server related](#markdown-header-server-related)
+    * [`pid_numberer`](#markdown-header-pid_numberer)
+* [Examples](#markdown-header-examples)
+* [TODO](#markdown-header-todo)
+* [Meta info](#markdown-header-meta)
 
 ## Summary
 
