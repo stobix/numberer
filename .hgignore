@@ -1,2 +1,9 @@
+syntax:glob
+
+#.hgignore
+*beam
+*swp
+deps
+log
 ebin
-src/.*.swp
+doc
