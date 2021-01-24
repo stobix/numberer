@@ -45,7 +45,10 @@ count_occupied(Server) ->
 %%----------------------------------------------
 -spec get(server_id()) -> unique_integer().
 get(Server) ->
-  gen_server:call(numberer_srv,{get,Server}).
+  case gen_server:call(numberer_srv,{get,Server}) of
+    undefined -> throw( {"not initiated",Server});
+    N -> N
+  end.
 
 %%----------------------------------------------
 %% @doc Associates a number with or gets the number associated with a thing.

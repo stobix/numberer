@@ -107,9 +107,14 @@ handle_call({is_named,Number,Server},_From,State) ->
 %-- modifying calls/casts --
 
 handle_call({get,Server},_From,State) ->
-  {value,S}=gb_trees:lookup(Server,State),
-  {Reply,NewS}=get__(S),
-  {reply,Reply,gb_trees:enter(Server,NewS,State)}.
+  case gb_trees:lookup(Server,State) of
+    {value,S} ->
+      {Reply,NewS}=get__(S),
+      {reply,Reply,gb_trees:enter(Server,NewS,State)};
+    none ->
+      {reply,undefined,State}
+  end.
+
 
 handle_cast({rename,OldName,NewName,Server},State) ->
   {value,S}=gb_trees:lookup(Server,State),
@@ -117,9 +122,9 @@ handle_cast({rename,OldName,NewName,Server},State) ->
 
 
 handle_cast({reset,N,Server},State) ->
-  {value,S}=gb_trees:lookup(Server,State),
-  {noreply,gb_trees:enter(Server,reset__(N,S),State)};
+  {noreply,gb_trees:enter(Server,init__(N),State)};
 
+% TODO: Make this a call - the thing that should crash is not numberer_srv but the caller!
 handle_cast({register,Name,Number,Server},State) ->
   {value,S}=gb_trees:lookup(Server,State),
   {noreply,gb_trees:enter(Server,register__(Name,Number,S),State)};
@@ -174,9 +179,6 @@ rename__(OldName,NewName,{CurrentHighest,Frees,Reserved}=Status) ->
     false ->
       Status
   end.
-
-reset__(N,_) ->
-  {N,[],[]}.
 
 init__(N) ->
   {N,[],[]}.
